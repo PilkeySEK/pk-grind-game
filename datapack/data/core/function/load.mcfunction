@@ -5,3 +5,4 @@ gamerule doImmediateRespawn true
 gamerule locatorBar false
 
 tellraw @a {text:"The cod🐟 is load",color:"#00FF00"}
+tellraw @a "would be crazy if it worked first try ngl"
