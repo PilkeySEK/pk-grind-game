@@ -1,0 +1,1 @@
+execute as @a run function core:player/player_tick
