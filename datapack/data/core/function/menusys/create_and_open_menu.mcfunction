@@ -1,0 +1,19 @@
+# expects `.id menu_id` to be set
+
+scoreboard players add .current inventory_id 1
+scoreboard players operation @s inventory_id = .current inventory_id
+
+summon chest_minecart 0 0 0 {Tags:["tmp_inv","inventory"],NoGravity:true,Invulnerable:true}
+scoreboard players operation @e[type=chest_minecart,tag=tmp_inv,limit=1] inventory_id = .current inventory_id
+
+scoreboard players operation @e[type=chest_minecart,tag=tmp_inv,limit=1] menu_id = .id menu_id
+
+execute as @e[type=chest_minecart,tag=tmp_inv,limit=1] run function core:menusys/load_menu
+
+# 1 minute
+scoreboard players set @s menu_timeout 1200
+
+execute if score .id menu_id matches 1 run inventory @s entity @e[type=chest_minecart,tag=tmp_inv,limit=1] <blue>Main Menu
+execute unless score .id menu_id matches 1..1 run inventory @s entity @e[type=chest_minecart,tag=tmp_inv,limit=1] <red>Inventory title not found :(
+
+tag @e[type=chest_minecart,tag=tmp_inv,limit=1] remove tmp_inv
