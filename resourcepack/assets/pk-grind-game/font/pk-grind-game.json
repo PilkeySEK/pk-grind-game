@@ -4,7 +4,7 @@
             "type": "bitmap",
             "file": "minecraft:font/thing.png",
             "chars": [
-                "\uE100"
+                "\uE100\uE101"
             ],
             "ascent": 8
         }
