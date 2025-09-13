@@ -1,5 +1,7 @@
 # expects `.id menu_id` to be set
 
+function core:menusys/kill_menu
+
 scoreboard players add .current inventory_id 1
 scoreboard players operation @s inventory_id = .current inventory_id
 
