@@ -1,3 +1,5 @@
+execute unless score @s detection.join matches 0 run function core:player/on_join
+
 function core:player/triggers
 
 function core:player/items
