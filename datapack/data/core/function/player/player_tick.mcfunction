@@ -5,3 +5,6 @@ function core:player/items
 function core:player/item_click
 
 execute if score @s inventory_id matches 1.. run function core:menusys/timeout
+
+execute store result score item_count tmp run clear @s *[custom_data~{inv_item:true}]
+execute if score item_count tmp matches 1.. run function core:menusys/reload_player_menu

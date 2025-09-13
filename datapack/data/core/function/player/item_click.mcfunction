@@ -6,6 +6,4 @@ execute if items entity @s player.cursor *[custom_data~{discover:true}] run func
 # clear cursor item
 item replace entity @s player.cursor with air
 
-# re-place items into the minecart
-scoreboard players operation .this inventory_id = @s inventory_id
-execute as @e[type=chest_minecart,tag=inventory] if score @s inventory_id = .this inventory_id run function core:menusys/load_menu
+function core:menusys/reload_player_menu
