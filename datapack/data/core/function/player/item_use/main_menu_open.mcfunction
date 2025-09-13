@@ -6,7 +6,9 @@ scoreboard players operation @s inventory_id = .current inventory_id
 summon chest_minecart 0 0 0 {Tags:["tmp_inv","inventory"],NoGravity:true,Invulnerable:true}
 scoreboard players operation @e[type=chest_minecart,tag=tmp_inv,limit=1] inventory_id = .current inventory_id
 
-execute as @e[type=chest_minecart,tag=tmp_inv,limit=1] run function core:menusys/load_menu/main_menu
+scoreboard players set @e[type=chest_minecart,tag=tmp_inv,limit=1] menu_id 1
+
+execute as @e[type=chest_minecart,tag=tmp_inv,limit=1] run function core:menusys/load_menu
 
 inventory @s entity @e[type=chest_minecart,tag=tmp_inv,limit=1] <blue>Main Menu
 
