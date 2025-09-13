@@ -15,7 +15,6 @@ execute as @e[type=chest_minecart,tag=tmp_inv,limit=1] run function core:menusys
 # 1 minute
 scoreboard players set @s menu_timeout 1200
 
-execute if score .id menu_id matches 1 run inventory @s entity @e[type=chest_minecart,tag=tmp_inv,limit=1] <blue>Main Menu
-execute unless score .id menu_id matches 1..1 run inventory @s entity @e[type=chest_minecart,tag=tmp_inv,limit=1] <red>Inventory title not found :(
+function core:menusys/open_inv
 
 tag @e[type=chest_minecart,tag=tmp_inv,limit=1] remove tmp_inv

@@ -1,0 +1,2 @@
+execute if score .id menu_id matches 1 run inventory @s entity @e[type=chest_minecart,tag=tmp_inv,limit=1]
+execute unless score .id menu_id matches 1..1 run inventory @s entity @e[type=chest_minecart,tag=tmp_inv,limit=1]
