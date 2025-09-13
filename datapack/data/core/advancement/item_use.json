@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": {
+              "use": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "core:player/item_use"
+  }
+}
