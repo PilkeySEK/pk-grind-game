@@ -1,3 +1,6 @@
+execute store result score @s yLevel run data get entity @s Pos[1]
+execute if score @s yLevel matches ..50 run tp @s 0 64 0
+
 execute unless score @s detection.join matches 0 run function core:player/on_join
 
 function core:player/triggers
