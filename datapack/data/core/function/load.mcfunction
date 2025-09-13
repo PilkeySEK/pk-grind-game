@@ -14,7 +14,6 @@ scoreboard objectives add detection.join custom:leave_game
 scoreboard objectives add yLevel dummy
 scoreboard objectives add stats.winner_count dummy
 scoreboard objectives add server_stats dummy
-scoreboard objectives add item_use_cooldown dummy
 # triggers
 scoreboard objectives add statistics trigger
 # constants
