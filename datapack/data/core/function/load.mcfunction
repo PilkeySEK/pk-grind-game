@@ -23,6 +23,9 @@ scoreboard players set 20 const 20
 scoreboard players set 50 const 50
 scoreboard players set 60 const 60
 
+team add everyone {text:"@everyone",color:"aqua"}
+team modify everyone collisionRule never 
+
 scoreboard players add reload_count server_stats 1
 execute unless entity @a run scoreboard players set uptime server_stats 0
 tellraw @a {text:"The cod🐟 is load",color:"#00FF00"}
