@@ -4,7 +4,6 @@ gamerule doFireTick false
 gamerule doImmediateRespawn true
 gamerule locatorBar false
 gamerule fallDamage false
-gamerule pvp false
 
 scoreboard objectives add tmp dummy
 scoreboard objectives add inventory_id dummy
