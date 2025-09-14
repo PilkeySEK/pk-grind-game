@@ -21,11 +21,6 @@ scoreboard objectives add const dummy
 scoreboard players set 20 const 20
 scoreboard players set 50 const 50
 scoreboard players set 60 const 60
-# required levels
-scoreboard objectives add required_level dummy
-scoreboard players set easy_pks required_level 0
-scoreboard players set medium_pks required_level 10
-scoreboard players set hard_pks required_level 30
 
 scoreboard players add reload_count server_stats 1
 execute unless entity @a run scoreboard players set uptime server_stats 0
